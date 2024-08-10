@@ -1,0 +1,86 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.btn-default {
+  padding: 15.5px 22px;
+  color: #fff;
+  font-family: $second-font;
+  font-weight: 700;
+  background-color: $main-color;
+  border: transparent;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+
+  &:hover {
+    background-color: $color-1;
+    outline: none;
+  }
+
+  &:focus {
+    outline: 3px solid $color-2;
+  }
+
+  &:active {
+    background-color: $color-2;
+    outline: none;
+  }
+
+  @include mobile {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+}
+
+.section-title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 700;
+
+  @include mobile {
+    font-size: 18px;
+  }
+}
+
+.hashtag {
+  position: relative;
+}
+
+.hashtag::after {
+  position: absolute;
+  content: '';
+  top: 15px;
+  right: 15px;
+  padding: 6px 14px;
+  font-family: $second-font;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  background-color: #202020;
+
+  @include small-tablet {
+    padding: 7px 15px;
+  }
+
+  @include mobile {
+    top: 6px;
+    right: 5px;
+    padding: 4px 7px;
+    font-size: 12px;
+  }
+}

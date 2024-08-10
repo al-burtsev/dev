@@ -1,0 +1,153 @@
+.footer {
+  padding: 26px 0 16px 0;
+  background-color: #202020;
+
+  @include tablet {
+    padding: 24px 0 16px 0;
+  }
+  @include small-tablet {
+    padding: 26px 0 20px 0;
+  }
+  @include mobile {
+    padding: 31px 0 0 0;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+
+    @include tablet {
+      grid-template-columns: repeat(8, 1fr);
+      align-items: center;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 0;
+      gap: 28px;
+    }
+  }
+
+  &__left {
+    grid-column: span 3;
+
+    @include tablet {
+      grid-column: span 3;
+    }
+
+    @include mobile {
+      width: 100%;
+      padding: 14px 0;
+      text-align: center;
+      background: #4a4a4a;
+
+    }
+  }
+
+  &__left .logo:focus {
+    outline: transparent;
+  }
+
+  .logo {
+    display: block;
+
+    @include tablet {
+      position: relative;
+      top: -4px;
+      max-width: 166px;
+      line-height: 0;
+    }
+
+    @include mobile {
+      max-width: 111px;
+      margin: 0 auto;
+      top: 0;
+    }
+  }
+
+  &__company {
+    color: #E9E9E9;
+    font-size: 14px;
+    line-height: 18px;
+    white-space: nowrap;
+
+    @include mobile {
+      font-size: 10px;
+      text-align: center;
+    }
+  }
+
+  &__center {
+    grid-column: 5/10;
+    max-width: max(364px, 70%);
+    font-family: $second-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+    color: #cacaca;
+
+    @include tablet {
+      grid-column: span 3;
+    }
+
+    @include medium-tablet {
+      display: none;
+    }
+  }
+
+  &__right {
+    grid-column: 11/-1;
+    justify-self: flex-end;
+
+    @include tablet {
+      grid-column: span 2;
+    }
+
+    @include medium-tablet {
+      grid-column: 5/-1;
+    }
+  }
+
+  &__right-title {
+    margin-bottom: 10px;
+    color: #CACACA;
+    font-family: $second-font;
+    white-space: nowrap;
+
+    @include mobile {
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 137%;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__social-svg path {
+    transition: fill .3s ease-in-out;
+  }
+
+  &__social-link:focus {
+    outline: transparent;
+  }
+
+  &__social-link:hover &__social-svg path {
+    fill: $main-color;
+  }
+
+  &__social-link:focus &__social-svg path {
+    fill: $color-1;
+  }
+
+  &__social-link:active &__social-svg path {
+    fill: $color-2;
+  }
+
+}

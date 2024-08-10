@@ -1,0 +1,15 @@
+$content-width: 1290px;
+$container-offset: 31px;
+$container-offset-md: 27px;
+$container-offset-sm: 21px;
+$container-width: calc($content-width + ($container-offset * 2));
+
+$main-font: "TTFirsNeue";
+$second-font: "Roboto", sans-serif;
+$header-height: 80px;
+$header-height-sm: 70px;
+$menu-gap: 79px;
+$menu-gap-md: 33px;
+$main-color: #FF6E30;
+$color-1: #BC572B;
+$color-2: #CE4307;

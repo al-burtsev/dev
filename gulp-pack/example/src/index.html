@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  @include('partials/header.html')
+  <main class="main">
+    <section class="hero" aria-label="Главный раздел">
+      <div class="container hero__container">
+        <div class="hero__left hashtag">
+          <p class="hero__left-descr">Мастер-класс от Игоря Робова</p>
+          <h2 class="hero__left-title">Неоновый фотосет 2.0 <time>7 июля 20:00</time>
+          </h2>
+          <a aria-label="ссылка узнать больше о событии Неоновый фотосет 2.0" href=""
+            class="hero__left-link btn-default">Узнать больше</a>
+        </div>
+        <div class="hero__right">
+          <h3 class="hero__right-title">Работы участников предыдущего мастер-класса</h3>
+          <ul class="hero__right-list">
+            <li class="hero__right-item">
+              <picture>
+                <source media="(max-width: 320px)" srcset="img/320/hw1-320.jpg" sizes="">
+                <source media="(max-width: 576px)" srcset="img/hw1.jpg" sizes="">
+                <source media="(max-width: 768px)" srcset="img/768/hw1-768.jpg" sizes="">
+                <source media="(max-width: 1024px)" srcset="img/1024/hw1-1024.jpg" sizes="">
+                <img src="img/hw1.jpg" alt="Девушка в неоновом свете фото 1">
+              </picture>
+            </li>
+            <li class="hero__right-item">
+              <picture>
+                <source media="(max-width: 320px)" srcset="img/320/hw2-320.jpg" sizes="">
+                <source media="(max-width: 576px)" srcset="img/hw2.jpg" sizes="">
+                <source media="(max-width: 768px)" srcset="img/768/hw2-768.jpg" sizes="">
+                <source media="(max-width: 1024px)" srcset="img/1024/hw2-1024.jpg" sizes="">
+                <img src="img/hw2.jpg" alt="Девушка в неоновом свете фото 2">
+              </picture>
+            </li>
+            <li class="hero__right-item">
+              <picture>
+                <source media="(max-width: 320px)" srcset="img/320/hw3-320.jpg" sizes="">
+                <source media="(max-width: 576px)" srcset="img/hw3.jpg" sizes="">
+                <source media="(max-width: 768px)" srcset="img/768/hw3-768.jpg" sizes="">
+                <source media="(max-width: 1024px)" srcset="img/1024/hw3-1024.jpg" sizes="">
+                <img src="img/hw3.jpg" alt="Девушка в неоновом свете фото 3">
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="about" aria-label="О студии">
+      <div class="container about__container">
+        <h2 class="section-title about__title">О студии</h2>
+        <div class="about__wrapper">
+          <p class="about__descr">
+            В рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно
+            синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны:
+            высокотехнологичная концепция общественного уклада требует от нас&nbsp;анализа соответствующих условий
+            активизации! Следует отметить, что&nbsp;семантический разбор внешних противодействий фиксирует необходимость
+            распределения внутренних резервов и ресурсов. Безусловно, граница обучения кадров предоставляет широкие
+            возможности для первоочередных требований. Повседневная практика показывает, что&nbsp;глубокий уровень
+            погружения
+            предполагает&nbsp;независимые способы реализации новых принципов формирования&nbsp;материально-технической
+            и&nbsp;кадровой
+            базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только методом
+            политического участия и нарушающими общечеловеческие нормы этики.
+          </p>
+          <div class="about__right">
+            <div class="about__form-wrap">
+              <p class="about__sign">Подписаться на рассылку</p>
+              <form action="" class="about__form">
+                <input aria-label="подписка на рассылку, поле для ввода email" class="about__form-input" id="email"
+                  type="email" placeholder="Email">
+                <button aria-label="кнопка согласия на рассылку" class="btn-default">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="projects" aria-label="Раздел наши проекты">
+      <div class="container">
+        <h2 class="section-title projects__title">Наши проекты</h2>
+        <ul class="projects__cards-wrapper">
+          <li class="projects__card hashtag">
+            <p class="projects__card-descr">Синтетически, смешаны с не уникальными данными до степени…</p>
+            <time class="projects__card-time">16 июня</time>
+          </li>
+          <li class="projects__card hashtag">
+            <p class="projects__card-descr">В своём стремлении улучшить опыт <span></span> мы
+              упускаем, что явные…</p>
+            <time class="projects__card-time">28 мая</time>
+          </li>
+          <li class="projects__card hashtag">
+            <p class="projects__card-descr">Равным образом, высокое качество позиционных высокотехнологичная концепция
+              общественного уклада</p>
+            <time class="projects__card-time">14 мая</time>
+          </li>
+          <li class="projects__card projects__card_big hashtag">
+            <time class="projects__card-time">9 апреля</time>
+
+            <h3 class="projects__card-title">Cемантический разбор</h3>
+            <p class="projects__card-descr">В рамках спецификации современных стандартов, интерактивные прототипы
+            </p>
+            <a class="btn-default projects__card-link" href="">О проекте</a>
+          </li>
+          <li class="projects__card hashtag">
+            <p class="projects__card-descr">Как принято считать, многие известные личности и по сей день остаются уделом
+              либералов…</p>
+            <time class="projects__card-time">9 марта</time>
+          </li>
+          <li class="projects__card hashtag">
+            <p class="projects__card-descr">С учётом сложившейся международной обстановки, новая модель организационной…
+            </p>
+            <time class="projects__card-time">1 марта</time>
+          </li>
+
+          <li class="projects__card projects__card_big hashtag">
+            <time class="projects__card-time">20 марта</time>
+            <h3 class="projects__card-title">Забвение</h3>
+
+            <p class="projects__card-descr">Играет важную роль в формировании глубокомысленных рассуждений</p>
+            <a class="btn-default projects__card-link" href="">О проекте</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="contacts" aria-label="Раздел контакты">
+      <div class="container contacts__container">
+        <h2 class="section-title contacts__title">Контакты</h2>
+        <div class="contacts__wrapper">
+          <div class="contacts__left">
+            <div class="contacts__company">
+              <h3 class="contacts__company-title">Студия «High pass»</h3>
+              <address class="contacts__company-descr">107045, Москва, Даев&nbsp;переулок,
+                дом&nbsp;41,&nbsp;бизнес-центр «Даев&nbsp;Плаза»,
+                этаж&nbsp;8,&nbsp;офис&nbsp;№&nbsp;82
+                <a class="contacts__company-phone" href="tel:+7 495 424-23-532">+7 495 424-23-532</a>
+              </address>
+              <button class="contacts__company-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="10" r="10" fill="#999999" />
+                  <rect x="6.20715" y="5.5" width="12" height="1" transform="rotate(45 6.20715 5.5)" fill="white" />
+                  <rect x="5.59143" y="13.9854" width="12" height="1" transform="rotate(-45 5.59143 13.9854)"
+                    fill="white" />
+                </svg></button>
+            </div>
+          </div>
+          <div class="contacts__right">
+            <h3 class="contacts__right-title">Оставить заявку</h3>
+            <p class="contacts__right-descr">Оставьте ваши данные, указав в графе «Комментарий» желаемые время и дату
+              съёмки или другого мероприятия</p>
+            <form class="contacts__form" action="">
+              <input class="contacts__userName" type="text" name="" placeholder="Имя">
+              <input class="contacts__email" type="email" placeholder="Email">
+              <textarea class="contacts__message" name="" id="" cols="30" rows="10"
+                placeholder="Комментарий"></textarea>
+              <button class="btn-default contacts__btn">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  @include('partials/footer.html')
+</body>
+
+</html>

@@ -1,0 +1,394 @@
+.projects {
+
+  padding-top: 68px;
+
+  @include mobile {
+    padding-top: 46px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    color: #202020;
+  }
+
+  &__cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+
+    @include tablet {
+      grid-template-columns: repeat(8, 1fr);
+      row-gap: 24px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(6, 1fr);
+      row-gap: 24px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      column-gap: 10px;
+      grid-auto-flow: dense;
+    }
+  }
+
+  &__card.hashtag::after {
+    top: 8px;
+    right: 8px;
+
+    @include small-tablet {
+      padding: 6px 14px 6px 14px;
+      top: 7px;
+      right: 7px;
+    }
+
+    @include mobile {
+      padding: 4px 14px 4px 14px;
+      top: 6px;
+      right: 5px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 202px;
+    background-repeat: no-repeat;
+
+    @include mobile {
+      padding-top: 72.7%;
+      background-size: 100%;
+    }
+
+    &:nth-child(1) {
+      grid-column: span 2;
+      background-image: url(../img/pc1.jpg);
+
+      &::after {
+        content: "#пейзаж";
+      }
+
+      @include tablet {
+        background-image: url(../img/1024/pc1-1024.jpg);
+      }
+
+      @include small-tablet {
+        background-image: url(../img/768/pc1-768.jpg);
+      }
+
+      @include mobile {
+        grid-column: span 1;
+        background-image: url(../img/320/pc1-320.jpg);
+      }
+    }
+
+    &:nth-child(2) {
+      grid-column: span 2;
+      background-image: url(../img/pc2.jpg);
+
+      &::after {
+        content: "#портрет";
+      }
+
+      @include tablet {
+        background-image: url(../img/1024/pc2-1024.jpg);
+      }
+
+      @include small-tablet {
+        background-image: url(../img/768/pc2-768.jpg);
+      }
+
+      @include mobile {
+        grid-column: span 1;
+        background-image: url(../img/320/pc2-320.jpg);
+      }
+    }
+
+    &:nth-child(3) {
+      grid-column: span 2;
+      background-image: url(../img/pc3.jpg);
+
+      &::after {
+        content: "#предмет";
+      }
+
+      @include tablet {
+        grid-column: span 4;
+        background-image: url(../img/1024/pc3-1024.jpg);
+      }
+
+      @include small-tablet {
+        grid-column: span 2;
+        background-image: url(../img/768/pc3-768.jpg);
+
+        .projects__card-descr {
+          -webkit-line-clamp: 2;
+        }
+      }
+
+      @include mobile {
+        grid-column: span 1;
+        background-image: url(../img/320/pc3-320.jpg);
+      }
+    }
+
+    &:nth-child(4) {
+      grid-column: span 6;
+      background-image: url(../img/pc4.jpg);
+
+      &::after {
+        content: "#fuji";
+      }
+
+      @include tablet {
+        grid-column: span 5;
+        background-image: url(../img/1024/pc4-1024.jpg);
+      }
+
+      @include small-tablet {
+        grid-column: span 6;
+        background-image: url(../img/768/pc4-768.jpg);
+      }
+
+      @include mobile {
+        grid-column: 1/-1;
+        background-image: url(../img/320/pc4-320.jpg);
+      }
+    }
+
+    &:nth-child(5) {
+      grid-column: span 3;
+      background-image: url(../img/pc5.jpg);
+
+      &::after {
+        content: "#ретушь";
+      }
+
+      @include tablet {
+        grid-column: 6/-1;
+        grid-row-start: 2;
+        background-image: url(../img/1024/pc5-1024.jpg);
+
+        .projects__card-descr {
+          -webkit-line-clamp: 3;
+        }
+
+      }
+
+      @include small-tablet {
+        grid-column: span 3;
+        grid-row-start: 3;
+        min-height: 307px;
+        margin-top: 7px;
+        background-image: url(../img/768/pc5-768.jpg);
+      }
+
+      @include mobile {
+        grid-column: span 1;
+        grid-row-start: auto;
+        min-height: auto;
+        margin-top: 2px;
+        background-image: url(../img/320/pc5-320.jpg);
+      }
+    }
+
+    &:nth-child(6) {
+      grid-column: -4/ span 3;
+      background-image: url(../img/pc6.jpg);
+
+      &::after {
+        content: "#портрет";
+      }
+
+      @include tablet {
+        grid-row-start: 3;
+        grid-column: 1 / span 3;
+        background-image: url(../img/1024/pc6-1024.jpg);
+
+        .projects__card-descr {
+          -webkit-line-clamp: 3;
+        }
+      }
+
+      @include small-tablet {
+        grid-column: 4/ span 3;
+        grid-row-start: 3;
+        min-height: 307px;
+        margin-top: 7px;
+        background-image: url(../img/768/pc6-768.jpg);
+      }
+
+      @include mobile {
+        grid-column: span 1;
+        grid-row-start: auto;
+        min-height: auto;
+        margin-top: 0;
+        background-image: url(../img/320/pc6-320.jpg);
+      }
+    }
+
+    &:nth-child(7) {
+      grid-column: 1/ span 6;
+      grid-row-start: 2;
+      background-image: url(../img/pc7.jpg);
+
+      &::after {
+        content: "#проектзабвение";
+      }
+
+      @include tablet {
+        grid-column: 4/ span 5;
+        grid-row-start: 3;
+        background-image: url(../img/1024/pc7-1024.jpg);
+      }
+
+      @include small-tablet {
+        grid-column: span 6;
+        grid-row-start: 4;
+        background-image: url(../img/768/pc7-768.jpg);
+      }
+
+      @include mobile {
+        grid-column: 1/-1;
+        grid-row-start: auto;
+        margin-top: 0;
+        background-image: url(../img/320/pc7-320.jpg);
+      }
+    }
+
+  }
+
+  &__card_big {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 300px;
+    padding: 22px 22px 30px 30px;
+
+    background-size: cover;
+
+    @include tablet {
+      padding: 30px;
+    }
+
+    @include mobile {
+      padding: 30px;
+      padding-top: 197px;
+      min-height: 422px;
+    }
+
+    .projects__card-title {
+      max-width: 47%;
+      margin: 0;
+      margin-bottom: 6px;
+      font-family: $main-font;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 100%;
+      color: #fff;
+
+      @include small-tablet {
+        max-width: 45%;
+        margin-bottom: 6px;
+      }
+
+      @include mobile {
+        margin-bottom: 11px;
+      }
+    }
+
+    .projects__card-descr {
+      max-width: 51%;
+      color: #fff;
+
+      @include tablet {
+        max-width: 55%;
+        -webkit-line-clamp: initial;
+      }
+
+      @include small-tablet {
+        max-width: 45%;
+      }
+
+      @include mobile {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 129%;
+      }
+    }
+
+    .projects__card-time {
+      margin-bottom: 2px;
+      color: #fff;
+      background-image: url(../img/calendar.svg);
+      background-position-y: 4px;
+
+      @include tablet {
+        margin-bottom: 2px;
+      }
+
+      @include mobile {
+        margin-bottom: 5px;
+      }
+    }
+
+    .projects__card-link {
+      display: inline-block;
+      margin-top: auto;
+
+      @include mobile {
+        padding: 9px 18px;
+      }
+    }
+  }
+
+  &__card-descr {
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: $second-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+    color: #202020;
+
+    @include tablet {
+      -webkit-line-clamp: 2;
+      margin-bottom: 18px;
+    }
+
+    @include small-tablet {
+      -webkit-line-clamp: 3;
+      margin-bottom: 11px;
+    }
+
+    @include mobile {
+      margin-bottom: 11px;
+      -webkit-line-clamp: 4;
+    }
+  }
+
+  &__card-time {
+    padding-left: 18px;
+    font-family: $second-font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 183%;
+    color: #999;
+    background-image: url(../../img/calendar-gray.svg);
+    background-repeat: no-repeat;
+    background-position: left 50%;
+
+    @include mobile {}
+  }
+
+  &__card-link {
+    padding: 12px 19px;
+    border: 3px solid #ff6e30;
+    background: transparent;
+  }
+}

@@ -1,0 +1,152 @@
+.hero {
+
+  padding: 41px 0 68px 0;
+
+
+  @include tablet {
+    padding: 34px 0 68px 0;
+  }
+
+  @include mobile {
+    padding: 30px 0 50px 0;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 35px;
+    }
+  }
+
+  &__left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 60px;
+    background-image: url(../img/hi1.jpg);
+    background-size: cover;
+    background-position: center 57%;
+    background-repeat: no-repeat;
+
+    &::after {
+      content: "#мастеркласс";
+      padding: 7px 15px;
+
+      @include mobile {
+        padding: 6px 7px;
+      }
+    }
+
+    @include tablet {
+      padding: 30px;
+      background-image: url(../img/1024/hi1-1024.jpg);
+    }
+
+    @include small-tablet {
+      background-image: url(../img/768/hi1-768.jpg);
+    }
+
+    @include mobile {
+      min-height: 422px;
+    }
+  }
+
+  &__left-descr {
+    margin-bottom: 3px;
+    font-family: $second-font;
+    color: #fff;
+
+    @include tablet {
+      margin-bottom: 9px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 14px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__left-title {
+    margin: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 36px;
+    line-height: 104%;
+    font-weight: 700;
+
+    @include tablet {
+      margin-bottom: 22px;
+      font-size: 34px;
+      line-height: 100%;
+    }
+
+    @include small-tablet {
+      margin-bottom: 24px;
+      line-height: 90%;
+    }
+
+    @include mobile {
+      margin-bottom: 13px;
+      font-size: 24px;
+      line-height: 110%;
+    }
+  }
+
+  &__left-link {
+    display: inline-block;
+  }
+
+  &__right-title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 700;
+
+    @include tablet {
+      margin-bottom: 25px;
+      line-height: 104%;
+    }
+
+    @include medium-tablet {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 104%;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__right-list {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+
+  &__right-item img {
+    display: block;
+    height: 100%;
+  }
+
+  &__right-item:nth-child(1) {
+    grid-column: span 2;
+  }
+
+}

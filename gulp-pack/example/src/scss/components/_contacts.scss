@@ -1,0 +1,252 @@
+.contacts {
+
+  margin-bottom: 70px;
+  padding-top: 68px;
+
+  @include tablet {
+    margin-bottom: 68px;
+  }
+
+  @include mobile {
+    margin-bottom: 50px;
+    padding-top: 31px;
+  }
+
+  &__title {
+    margin-bottom: 22px;
+
+    @include mobile {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 410px;
+    gap: 30px;
+
+
+    @include tablet {
+      grid-template-columns: 1fr 342px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
+
+    @include mobile {
+      gap: 23px;
+    }
+  }
+
+  &__left {
+    background-image: url(../img/map.jpg);
+
+    @include tablet {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    @include small-tablet {
+      min-height: 460px;
+    }
+
+    @include mobile {
+      margin: 0 -21px;
+      min-height: 472px;
+    }
+  }
+
+  &__company {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 410px;
+    padding: 175px 50px 100px 60px;
+    background: rgba(32, 32, 32, 0.85);
+
+    @include tablet {
+      height: auto;
+      max-width: 100%;
+      padding: 27px 30px 15px 30px;
+    }
+
+    @include small-tablet {
+      padding: 27px 30px 17px 30px;
+    }
+
+    @include mobile {
+      padding: 27px 30px 40px 20px;
+    }
+  }
+
+  &__company-title {
+    margin: 0;
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 92%;
+    color: #fff;
+
+    @include mobile {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 122%;
+    }
+  }
+
+  &__company-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__company-descr {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-family: $second-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    font-style: normal;
+    color: #cacaca;
+
+    @include tablet {
+      max-width: 68%;
+    }
+
+    @include small-tablet {
+      max-width: 78%;
+    }
+
+    @include mobile {
+      margin-bottom: 3px;
+      max-width: 100%;
+      font-size: 14px;
+      line-height: 129%;
+    }
+  }
+
+  &__company-phone {
+    display: block;
+    padding-left: 22px;
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 16px;
+    color: $main-color;
+    background-image: url(../img/phone.svg);
+    background-repeat: no-repeat;
+    background-size: 20px;
+
+    @include tablet {
+      display: inline;
+      text-wrap: nowrap;
+      padding-left: 30px;
+      background-size: 18px;
+      background-position: 11px;
+    }
+
+    @include small-tablet {
+      display: block;
+      position: static;
+      padding-left: 22px;
+    }
+
+    @include mobile {
+      position: absolute;
+      bottom: 13px;
+      padding-left: 18px;
+      font-size: 14px;
+      background-size: 15px;
+      background-position: 0;
+    }
+  }
+
+  &__right-title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40%;
+    color: #202020;
+
+    @include small-tablet {
+      margin-bottom: 10px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 122%;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__right-descr {
+    margin-bottom: 14px;
+    max-width: 99%;
+    font-family: $second-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+    color: #999;
+
+    @include small-tablet {
+      max-width: 70%;
+    }
+
+    @include mobile {
+      max-width: 100%;
+      font-size: 14px;
+      line-height: 129%;
+    }
+  }
+
+  &__userName,
+  &__email,
+  &__message {
+    margin-bottom: 20px;
+    padding: 16px 23px;
+    width: 100%;
+    max-width: 410px;
+    background: #e9e9e9;
+    border: none;
+
+    @include small-tablet {
+      max-width: 465px;
+    }
+
+    @include mobile {
+      padding: 12px 23px;
+    }
+  }
+
+  &__message {
+    max-height: 150px;
+    padding-top: 15px;
+    margin-bottom: 15px;
+    resize: none;
+
+    @include mobile {
+      margin-bottom: 19px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    padding: 15.5px 22px;
+    border: none;
+    color: #fff;
+    background: #ff6e30;
+
+    @include mobile {
+      padding: 12px 22px;
+      font-size: 14px;
+    }
+  }
+
+}

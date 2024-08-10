@@ -1,0 +1,161 @@
+@import "vars";
+@import "../mixins/breakpoint";
+
+.header {
+  background-color: #202020;
+
+  @include medium-tablet {
+    margin-bottom: 47px;
+  }
+
+  @include mobile {
+    margin-bottom: 45px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    height: $header-height;
+
+    @include tablet {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    @include medium-tablet {
+      position: relative;
+    }
+
+    @include mobile {
+      height: $header-height-sm;
+    }
+  }
+
+
+  &__logo-img {
+    @include tablet {
+      max-width: 166px;
+      padding-top: 5px;
+    }
+
+    @include mobile {
+      max-width: 111px;
+    }
+
+  }
+
+  &__logo-link {
+    grid-column: span 3;
+
+    @include tablet {
+      grid-column: span 2;
+    }
+
+  }
+
+  &__nav {
+    grid-column: span 7;
+    justify-self: center;
+
+    @include tablet {
+      grid-column: span 5;
+      justify-self: start;
+      padding-left: 8px;
+    }
+
+    @include medium-tablet {
+      position: absolute;
+      top: $header-height;
+      left: 0;
+      width: 100%;
+      padding: 13px $container-offset-md 14px $container-offset-md;
+      background-color: #4A4A4A;
+    }
+
+    @include mobile {
+      top: $header-height-sm;
+      padding: 13px $container-offset-sm 14px $container-offset-sm;
+    }
+  }
+
+  &__burger {
+    display: none;
+    width: 20px;
+    height: 18px;
+    background-image: url(../img/burger.svg);
+    background-repeat: no-repeat;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    gap: clamp(2rem, 4.5vw, $menu-gap);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include tablet {
+      gap: $menu-gap-md;
+    }
+
+    @include medium-tablet {
+      width: 100%;
+      justify-content: space-between;
+      gap: 0;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__menu-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color .3s ease-in-out;
+
+    &:hover {
+      color: $main-color;
+
+    }
+
+    &:focus {
+      color: #fff;
+      outline: none;
+      background-color: $color-1;
+    }
+
+    &:active {
+      color: $color-2;
+      background-color: transparent;
+    }
+  }
+
+  &__search-btn {
+    grid-column: span 2;
+    justify-self: end;
+    height: 25px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    @include tablet {
+      grid-column: span 1;
+    }
+
+    @include medium-tablet {
+      grid-column: 8/-1;
+    }
+
+    @include mobile {
+      & svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+}
