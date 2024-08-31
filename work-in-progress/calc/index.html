@@ -8,7 +8,8 @@
     <title>Calc</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.js"></script>
+    <script type="module" defer src="js/main.js"></script>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
             </div>
             <div class="calc__body">
                 <div class="calc__row">
-                    <button class="calc__btn">C</button>
+                    <button class="calc__btn" data-btn="clear">C</button>
                     <button class="calc__btn">±</button>
                     <button class="calc__btn">%</button>
                     <button class="calc__btn calc__btn_blue" data-btn="operation">÷</button>
