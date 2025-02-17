@@ -1,0 +1,50 @@
+:root {
+    --color-main: #d23838;
+    --color-main-soft: color-mix(in srgb,
+            var(--color-main),
+            white);
+    --color-main-softest: color-mix(in srgb,
+            var(--color-main),
+            white 80%);
+    --color-green: green;
+    --color-yellow: yellow;
+    --color-mix: color-mix(in srgb,
+            var(--color-green) 50%,
+            var(--color-yellow) 50%)
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 35%;
+    gap: 15px;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+}
+
+.square_1 {
+    background-color: var(--color-main);
+}
+
+.square_2 {
+    background-color: var(--color-main-soft);
+}
+
+.square_3 {
+    background-color: var(--color-main-softest);
+}
+
+.square_4 {
+    background-color: var(--color-green);
+}
+
+.square_5 {
+    background-color: var(--color-yellow);
+}
+
+.square_6 {
+    background-color: var(--color-mix);
+}

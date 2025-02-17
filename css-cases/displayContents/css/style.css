@@ -1,0 +1,37 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card {
+    max-width: 200px;
+    padding: 20px;
+    border: 1px solid darkblue;
+    border-radius: 20px;
+}
+
+.card__img {
+    display: block;
+    margin: 0 auto;
+}
+
+.card__info {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(223, 208, 208);
+}
+
+@media (max-width: 767px) {
+    .card {
+        display: grid;
+    }
+
+    .card__info {
+        display: contents; /*представляем обертку, как несуществующую*/
+    }
+
+    .card__quantity {
+        order: -1;
+    }
+}

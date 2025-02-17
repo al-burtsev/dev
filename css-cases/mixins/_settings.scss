@@ -1,0 +1,23 @@
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin margin-x($margin: 10px) {
+    margin-right: $margin;
+    margin-left: $margin;
+}
+
+@mixin box-shadow-prefix($value) {
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}
+
+@mixin icon($name, $size) {
+  .icon-#{$name} {
+    background: url("images/icon-#{$name}.svg");
+    width: #{$size}px;
+    height: #{$size}px;
+  }
+}
