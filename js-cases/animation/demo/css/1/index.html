@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #color {
+            transition: background-color 3s ease;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="color">Нажми меня</button>
+
+
+    Кликните на цифру для начала анимации:
+
+    <div id="digit">
+        <div id="stripe">0123456789</div>
+    </div>
+
+    <img src="boat.png" id="boat" alt="">
+
+    <div class="progress"></div>
+
+    <button onclick="run()">showCircle</button>
+
+
+    <script>
+        function run() {
+            showCircle(150, 150, 100, (div) => {
+                div.classList.add('message-ball');
+                const message = document.createElement('span');
+                message.textContent = "Привет, мир!";
+                div.appendChild(message);
+            });
+        }
+
+        function showCircle(cx, cy, radius, callback) {
+            const div = document.createElement('div');
+            div.style.left = `${cx - radius}px`; 
+            div.style.top = `${cy - radius}px`; 
+            div.className = 'circle';
+            document.body.append(div);
+
+            setTimeout(() => {
+                div.style.width = `${radius * 2}px`;
+                div.style.height = `${radius * 2}px`;
+
+                div.addEventListener('transitionend', function handler() {
+                    div.removeEventListener('transitionend', handler);
+                    callback(div);
+                }, { once: true });
+            }, 0);
+        }
+    </script>
+
+    <script src="script.js"></script>
+    <script>
+        color.onclick = function () {
+            this.classList.toggle('red');
+        };
+    </script>
+</body>
+
+</html>

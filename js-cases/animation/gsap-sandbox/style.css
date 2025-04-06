@@ -1,0 +1,33 @@
+body {
+  background-color: #000;
+}
+
+.box {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+  transform: translate(0);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #0e100f;
+}
+
+.token.function {
+  color: #93c763;
+}
+
+#canvas {
+  height: 80vh;
+  max-height: 300px;
+  overflow: visible;
+  border: solid 2px white;
+}

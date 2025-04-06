@@ -1,0 +1,49 @@
+body {
+    min-height: 150vh;
+    display: grid;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0;
+}
+
+img {
+    position: relative;
+    z-index: -1;
+    user-select: none;
+}
+
+.coffee,
+.bottle,
+.vase {
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+.coffee img {
+   max-width: 120px; 
+}
+
+.bottle img {
+    max-width: 200px;
+}
+.vase img {
+    max-width: 300px;
+}
+
+.table img {
+max-width: 800px;
+}
+
+.draggable {
+    position: absolute;
+    z-index: 1;
+    cursor: grab;
+    transition: scale, opacity .2s;
+    touch-action: none;
+}
+
+.draggable.is-dragging {
+    cursor: grabbing;
+    opacity: .5;
+    scale: 1.05;
+}
