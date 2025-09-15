@@ -4,17 +4,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const titleSplit = new SplitText('.title', { type: 'chars' });
     const titleChars = titleSplit.chars;
 
-    gsap.from(titleChars, {
-        yPercent: 130,
-        ease: 'back.out',
-        duration: 1,
-        stagger: 0.02,
-        scrollTrigger: {
-            trigger: '.title',
-            start: 'top 80%',
-            markers: true,
-        }
+    titleChars.reverse().forEach((char, index) => {
+        gsap.from(char, {
+            xPercent: -150 * (titleChars.length - index),
+            ease: 'back.inOut',
+            duration: 1,
+            delay: index * 0.1,
+            stagger: 0.02,
+            scrollTrigger: {
+                trigger: '.title',
+                start: 'top 80%',
+                markers: true,
+            }
+        });
     });
-
-
 });
