@@ -3,7 +3,7 @@ html {
 }
 
 *, *::before, *::after {
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 a {

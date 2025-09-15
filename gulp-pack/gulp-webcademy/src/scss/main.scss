@@ -1,0 +1,16 @@
+/* Base */
+@use './base/reset';
+@use './base/vars';
+@use './base/mixins';
+@use './base/fontsAutoGen';
+@use './base/base';
+@use './base/docs'; /* Отключить при необходимости */
+@use './base/utils'; // Тест на ошибку
+@use './base/containers';
+@use './base/sticky-footer';
+
+/* Blocks */
+@use './blocks/*.scss';
+
+/* No styles code below. Only in modules */
+/* Не пишите CSS код ниже. Только в подключаемых файлах */

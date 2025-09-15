@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 100px;
+}
+
+.btn {
+    --btn-padding: .5em 1.5em;
+    --btn-gap: .5em;
+    --btn-bg: #333;
+    --btn-color: #fff;
+    --btn-hover-bg: #444;
+    --btn-hover-color: #fff;
+    --btn-border-width: 1px;
+    --btn-border-style: solid;
+    --btn-border-color: var(--btn-bg);
+    --btn-border-radius: .5em;
+    --btn-font-weight: 400;
+    --btn-font-size: 20px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: var(--btn-gap);
+    padding: var(--btn-padding);
+    border-width: var(--btn-border-width);
+    border-style: var(--btn-border-style);
+    border-color: var(--btn-border-color);
+    border-radius: var(--btn-border-radius);
+
+    text-decoration: none;
+    font-weight: var(--btn-font-weight, 400);
+    font-size: var(--btn-font-size);
+    font-family: sans-serif;
+    line-height: 1.5;
+
+    color: var(--btn-color);
+    background-color: var(--btn-bg);
+
+    cursor: pointer;
+
+    transition: background-color .3s, color .3s, scale .3s;
+}
+
+.btn svg {
+    width: auto;
+    height: 1.4cap;
+    flex: none;
+    fill: currentColor;
+}
+
+@media (any-hover: hover) {
+    .btn:hover {
+        background-color: var(--btn-hover-bg);
+        color: var(--btn-hover-color);
+    }
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--btn-bg);
+    outline-offset: 3px;
+}
+
+.btn:active {
+    scale: 98%
+}
+
+.btn--accent {
+    --btn-bg: #DDE57A;
+    --btn-color: #333;
+    --btn-border-color: #C5CB72;
+    --btn-hover-bg: #B4B96B;
+    --btn-hover-color: #333;
+}
+
+.btn--danger {
+    --btn-bg: #D52B2B;
+    --btn-color: #fff;
+    --btn-border-color: #A11616;
+}
+
+.btn--hard {
+    --btn-border-radius: none;
+}
+
+.btn--ghost {
+    --btn-color: #333;
+    --btn-bg: transparent;
+    --btn-border-color: currentColor;
+}

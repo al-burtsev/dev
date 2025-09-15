@@ -1,0 +1,123 @@
+
+/* burger */
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.burger-wrap {
+  display: none;
+  transition: transform .3s;
+}
+
+.burger-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.burger-wrap:focus-visible .burger {
+  scale: .95;
+  outline: 1px solid #fff;
+  outline-offset: 5px;
+}
+
+@media (hover: hover) {
+  .burger-wrap:hover {
+    transform: scale(.95);
+  }
+}
+
+.burger {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  width: 36px;
+  height: 26px;
+  margin: 0;
+}
+
+.burger::before,
+.burger::after {
+  content: '';
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: background-color .3s;
+}
+
+.burger::before {
+  top: 0;
+  box-shadow: 0 11px 0 #fff;
+  transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+}
+
+.burger::after {
+  bottom: 0;
+  transition: bottom .3s .15s, transform .3s;
+}
+
+
+.burger--clicked:active .burger::before,
+.burger--clicked:active .burger::after {
+  background-color: hsl(0, 0%, 80%);
+}
+
+.burger-checkbox:checked+.burger::before {
+  top: 11px;
+  transform: rotate(45deg);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+  transition: box-shadow .15s, top .3s, transform .3s .15s;
+}
+
+.burger-checkbox:checked+.burger::after {
+  bottom: 11px;
+  transform: rotate(-45deg);
+  transition: bottom .3s, transform .3s .15s;
+}
+
+@media (max-width: 1024px) {
+
+  .transition {
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .header .col-md-8 {
+    width: auto;
+  }
+
+  .burger-wrap {
+    display: block;
+  }
+
+  .burger--clicked {
+    position: fixed;
+    top: 20px;
+    right: 15px;
+  }
+
+  .header-menu {
+    --header-height: 73px;
+    position: fixed;
+    background-color: #171717;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    min-width: 300px;
+    padding-top: var(--header-height);
+    transform: translateX(100%);
+  }
+
+  .header-menu--visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* burger */
