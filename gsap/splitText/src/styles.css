@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+
+
+body {
+    font-family: sans-serif;
+}
+
+section {
+    margin-top: 100vh;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    padding-top: 3rem;
+    font-family: "Racing Sans One", sans-serif;
+    font-size: 8vw;
+    line-height: 0.8;
+    letter-spacing: 1rem;
+}
