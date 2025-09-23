@@ -20,7 +20,7 @@ tl.set(detailPage, {
     opacity: 1,
     duration: 0.3,
     ease: 'power4.in'
-});
+}, '-=50%');
 
 const closeBtnTl = gsap.timeline({ paused: true });
 
