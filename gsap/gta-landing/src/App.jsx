@@ -8,6 +8,7 @@ import SecondVideo from './sections/SecondVideo'
 import Lucia from './sections/Lucia'
 import PostCard from './sections/PostCard'
 import Final from './sections/Final'
+import Footer from './sections/Footer'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -23,6 +24,7 @@ const App = () => {
             <Lucia />
             <PostCard />
             <Final />
+            <Footer />
         </main>
     )
 }
