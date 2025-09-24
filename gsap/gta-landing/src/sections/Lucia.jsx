@@ -36,7 +36,7 @@ const Lucia = () => {
       </div>
 
       <div className="lg:w-1/2 lucia-life-content">
-        <div className="max-w-xl lg:ps-32 ps-10">
+        <div className="max-w-xl lg:ps-0 xl:ps-8 2xl:ps-16 ps-10">
           <h1>Lucia Caminos</h1>
           <h2>Lucia’s father taught her to fight as soon as she could walk.</h2>
           <p>Life has been coming at her swinging ever since. Fighting for her family landed her in the Leonida Penitentiary. Sheer luck got her out. Lucia’s learned her lesson — only smart moves from here.</p>
@@ -46,7 +46,7 @@ const Lucia = () => {
           <img src="/images/lucia-2.webp" />
         </div>
 
-        <p className="max-w-xl lg:ps-32 ps-10">More than anything, Lucia wants the good life her mom has dreamed of since their days in Liberty City — but instead of half-baked fantasies, Lucia is prepared to take matters into her own hands.</p>
+        <p className="max-w-xl lg:ps-8 xl:ps-8 2xl:ps-16 ps-10">More than anything, Lucia wants the good life her mom has dreamed of since their days in Liberty City — but instead of half-baked fantasies, Lucia is prepared to take matters into her own hands.</p>
       </div>
     </section>
   )
